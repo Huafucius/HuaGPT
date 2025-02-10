@@ -1,0 +1,42 @@
+[
+  { "role": "user", "content": "今天北京天气如何" },
+  {
+    "role": "assistant",
+    "tool_calls": [
+      {
+        "id": "call_J8kisLt7f01cNA2h6HWPszSR",
+        "type": "function",
+        "function": {
+          "name": "get_weather",
+          "arguments": "{\"city\":\"北京\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_J8kisLt7f01cNA2h6HWPszSR",
+    "content": "北京的天气是晴朗的"
+  },
+  { "role": "assistant", "content": "今天北京的天气是晴朗的。" },
+  { "role": "user", "content": "2+2=?" },
+  {
+    "role": "assistant",
+    "tool_calls": [
+      {
+        "id": "call_A9ZIbMZUiBnLNYUt3Te9fI1o",
+        "type": "function",
+        "function": {
+          "name": "add_two_numbers",
+          "arguments": "{\"a\":2,\"b\":2}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_A9ZIbMZUiBnLNYUt3Te9fI1o",
+    "content": "2 + 2 = 4"
+  },
+  { "role": "assistant", "content": "2 + 2 = 4。" }
+]
